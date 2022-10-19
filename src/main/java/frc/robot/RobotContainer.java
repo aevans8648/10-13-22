@@ -1,5 +1,7 @@
 package frc.robot;
 
+import com.revrobotics.CANSparkMax;
+import com.revrobotics.CANSparkMaxLowLevel;
 import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
@@ -25,6 +27,14 @@ public class RobotContainer {
     boolean fieldRelative;
     boolean openLoop;
 
+    CANSparkMax rearRight =
+        new CANSparkMax(Constants.Motors.rearRightID, CANSparkMaxLowLevel.MotorType.kBrushless);
+    CANSparkMax frontLeft =
+        new CANSparkMax(Constants.Motors.frontLeftID, CANSparkMaxLowLevel.MotorType.kBrushless);
+    CANSparkMax frontRight =
+        new CANSparkMax(Constants.Motors.frontRightID, CANSparkMaxLowLevel.MotorType.kBrushless);
+    CANSparkMax rearLeft =
+        new CANSparkMax(Constants.Motors.rearLeftID, CANSparkMaxLowLevel.MotorType.kBrushless);
 
     /* Subsystems */
 
